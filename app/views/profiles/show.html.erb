@@ -1,0 +1,7 @@
+Avatar:<%= image_tag current_user.profile.avatar.url(:thumb) %><br />
+Nickname: <%= current_user.profile.nickname %><br />
+Age: <%= current_user.profile.age %><br />
+<%= link_to "Edit", edit_profile_path(current_user.id) %><br />
+
+
+

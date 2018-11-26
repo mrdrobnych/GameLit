@@ -1,0 +1,10 @@
+<%= link_to "LogIn", new_user_session_path %><br />
+<%= link_to "LogOut", destroy_user_session_path, method: :delete %><br />
+
+<% if user_signed_in? %>
+	<% if current_user.profile.nil? %>
+    	<%= link_to "Create New Profile", new_profile_path %> 
+	<% else %>
+    	<%= link_to "My Profile", profile_path(current_user.id) %> 
+	<% end %>
+<% end %>
